@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html >
+<body>
+ <div class="login">
+	<h1>Prediction of Diabetes</h1>
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="Glucose" placeholder="Glucose level" required="required" /><br><br>
+        <input type="text" name="Bp" placeholder="Bp level" required="required" /><br><br>
+		<input type="text" name="Insulin" placeholder="Insuline level" required="required" /><br><br>
+        <input type="text" name="BMI" placeholder="BMI level" required="required" /><br><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button><br>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
